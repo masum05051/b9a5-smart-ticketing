@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>b9a5-smart-ticketing</title>
+    <!-- tailwind css cdn link  -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- fontawesome cdn link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .font-inter {
+        font-family: "Inter", sans-serif;
+      }
+      .font-roboto {
+        font-family: "Roboto", sans-serif;
+      }
+      .font-raleway {
+        font-family: "Raleway", sans-serif;
+      }
+      .coupon-text::after,
+      .ticket-shape::after {
+        position: absolute;
+        content: "";
+        top: 0;
+        background-size: auto 100%;
+        background-repeat: no-repeat;
+      }
+      .coupon-text::after {
+        background-image: url("./images/cupon-devider.png");
+        height: 100%;
+        width: 50px;
+        right: 0;
+      }
+      .ticket-shape::after {
+        background-image: url("./images/info-devider.png");
+        height: 100%;
+        width: 80px;
+        left: 0;
+      }
+    </style>
+  </head>
+  <body class="font-inter">
+    <header>
+      <div class="container mx-auto">
+        <nav class="flex justify-between items-center py-8">
+          <a href="#"
+            ><span class="text-[#030712] font-extrabold text-4xl"
+              >P-Ticket</span
+            ></a
+          >
+          <button
+            class="flex items-center gap-2 px-8 py-4 bg-[#1dd1001a] rounded-xl border border-[#1dd10066] color-[#1dd10066] font-bold text-xl font-raleway"
+          >
+            Bus <img src="./images/bus-icon.png" alt="" />
+          </button>
+        </nav>
+      </div>
+      <div class="container mx-auto">
+        <div
+          class="banner bg-contain bg-no-repeat"
+          style="
+            background-image: url(./images/banner.png);
+            background-size: 100% 100%;
+          "
+        >
+          <div class="py-[70px] px-8 text-center pb-[120px]">
+            <h2
+              class="text-white font-bold text-[64px] leading-[86px] text-center max-w-[742px] m-auto font-raleway"
+            >
+              End-to-End Travel with
+              <span class="text-[#1DD100]">P Paribahan</span>
+            </h2>
+            <p
+              class="text-lg max-w-[691px] leading-8 mx-auto mt-4 mb-8 text-white"
+            >
+              Yes, you can run unit tests and view the results directly within
+              the app. The integrated testing features allow for a streamlined .
+            </p>
+            <button
+              class="btn px-6 py-6 bg-[#1DD100] font-raleway font-bold text-xl rounded-xl"
+            >
+              Buy Tickets
+            </button>
+          </div>
+        </div>
+        <div>
+          <div></div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="coupon">
+        <div class="container mx-auto py-[120px]">
+          <h2
+            class="font-raleway text-[40px] font-bold text-[#030712] text-center mb-12"
+          >
+            Best offers for you
+          </h2>
+          <div class="flex gap-6">
+            <div class="bg-[#FFBF0F] flex rounded-3xl grow">
+              <div class="space-y-5 p-[52px] coupon-text relative">
+                <h3 class="text-[##030712cc] font-extrabold text-[40px]">
+                  15% OFF
+                </h3>
+                <span class="text-[##030712cc] text-xl font-semibold"
+                  >on your next purchase</span
+                >
+                <br />
+                <span class="text-[#03071280] font-medium text-lg"
+                  >use by january 2024</span
+                >
+              </div>
+              <div class="flex justify-center gap-2 flex-col p-[52px]">
+                <span class="text-[##030712cc] text-3xl font-semibold"
+                  >NEW15</span
+                >
+                <span class="text-[#03071280] font-medium text-xl"
+                  >Coupon Code</span
+                >
+              </div>
+            </div>
+            <div class="bg-[#F78C9C] flex rounded-3xl grow">
+              <div class="space-y-5 p-[52px] coupon-text relative">
+                <h3 class="text-[##030712cc] font-extrabold text-[40px]">
+                  20% OFF
+                </h3>
+                <span class="text-[##030712cc] text-xl font-semibold"
+                  >on your next purchase</span
+                >
+                <br />
+                <span class="text-[#03071280] font-medium text-lg"
+                  >use by january 2024</span
+                >
+              </div>
+              <div class="flex justify-center gap-2 flex-col p-[52px]">
+                <span class="text-[##030712cc] text-3xl font-semibold"
+                  >Couple 20</span
+                >
+                <span class="text-[#03071280] font-medium text-xl"
+                  >Coupon Code</span
+                >
+              </div>
+            </div>
+          </div>
+          <div class="text-center">
+            <button
+              class="btn px-6 py-6 text-[#1DD100] font-raleway font-bold text-xl rounded-xl border-[#1dd100] border mt-12"
+            >
+              See All Offers
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- ticket view -->
+      <div class="ticket bg-[#F7F8F8]">
+        <div class="container mx-auto">
+          <h2
+            class="font-raleway text-[40px] font-bold text-[#030712] text-center mb-2"
+          >
+            P.H Paribahan
+          </h2>
+          <p class="max-w-[736px] mx-auto text-[#03071299] text-lg text-center">
+            Yes, you can run unit tests and view the results directly within the
+            app. The integrated testing features allow for a streamlined .
+          </p>
+          <div class="flex px-8 bg-white rounded-3xl mt-12">
+            <div class="w-8/12 py-8">
+              <div class="flex justify-between items-center">
+                <div class="flex gap-2 items-center">
+                  <img src="./images/bus-logo.png" alt="" />
+                  <div>
+                    <h3 class="text-[#030712] text-[32px] font-bold">
+                      Greenline Paribahan
+                    </h3>
+                    <p class="text-[#03071299] text-lg">
+                      Coach-009-WEB ! AC_Business
+                    </p>
+                  </div>
+                </div>
+                <div class="flex bg-[#1dd10026] rounded-xl px-4 py-3 gap-2">
+                  <img src="./images/seat-green.png" alt="" />
+                  <span class="text-[#1DD100] text-lg font-medium"
+                    ><span>40</span> Seats left</span
+                  >
+                </div>
+              </div>
+              <div class="p-8 rounded-3xl bg-[#F7F8F8] mt-6">
+                <div
+                  class="flex justify-between items-center pb-3 border-b border-dashed border-b-2"
+                >
+                  <span class="text-[#03071299]">Route</span>
+                  <span class="text-[#030712] font-raleway font-semibold"
+                    >Dhaka - Sylhet</span
+                  >
+                </div>
+                <div
+                  class="flex justify-between items-center py-3 border-b mb-3 border-dashed border-b-2"
+                >
+                  <span class="text-[#03071299]">Departure Time</span>
+                  <span class="text-[#030712] font-raleway font-semibold"
+                    >9:00 PM</span
+                  >
+                </div>
+                <div class="flex gap-6 *:grow">
+                  <div class="bg-[#0307120d] px-4 py-5 rounded-xl">
+                    <span class="text-[#03071299] font-medium"
+                      >Boarding Point - Laxmipur</span
+                    >
+                  </div>
+                  <div class="bg-[#0307120d] px-4 py-5 rounded-xl">
+                    <span class="text-[#03071299] font-medium"
+                      >Boarding Point - Laxmipur</span
+                    >
+                  </div>
+                  <div class="bg-[#0307120d] px-4 py-5 rounded-xl">
+                    <span class="text-[#03071299] font-medium"
+                      >Boarding Point - Laxmipur</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="w-4/12 ticket-shape relative flex flex-col justify-center items-center">
+                <div class="text-center">
+                    <img class="mx-auto" src="./images/fare.png" alt="">
+                    <h3 class="text-[#030712] font-raleway font-bold text-[32px]">550 Taka</h3>
+                    <span class="text-[#03071299] font-semibold font-raleway text-2xl">Per Seat</span>
+                </div>
+            </div>
+          </div>
+          <div class="mt-6 p-8 rounded-3xl bg-white flex">
+            <div class="w-7/12 pr-8 border-dashed border-r-2">
+                <h3 class="font-semibold font-raleway text-2xl text-[#030712]">Select Your Seat</h3>
+                <div class="py-3 my-3 border-y-2 border-dashed flex justify-between items-center">
+                    <span class="text-[#03071280] font-medium text-lg flex gap-2"><img src="./images/seat-gray.png" alt=""> Available</span>
+                    <span class="text-[#1DD100] font-medium text-lg flex gap-2"><img src="./images/seat-green-filled.png" alt=""> Selected</span>
+                </div>
+                <div class="">
+                    <div class="seat w-[110px] h-[56px] rounded-xl bg-[#0307121a] flex justify-center items-center ml-auto">
+                        <img src="./images/tabler-icon-steering-wheel.png" alt="">
+                    </div>
+                </div>
+
+                <div class="flex mt-6 single-row">
+                    <div  class="seat-label w-[56px] h-[56px] rounded-xl  flex justify-center items-center">A</div>
+
+                    <div class="flex justify-between grow">
+                        <div class="flex gap-8">
+                            <div class="seat w-[110px] h-[56px] rounded-xl bg-[#0307121a] flex justify-center items-center">
+                                A1
+                            </div>
+                            <div class="seat w-[110px] h-[56px] rounded-xl bg-[#0307121a] flex justify-center items-center">
+                                A2
+                            </div>
+                        </div>
+                        <div class="flex gap-8">
+                            <div class="seat w-[110px] h-[56px] rounded-xl bg-[#0307121a] flex justify-center items-center">
+                                A3
+                            </div>
+                            <div class="seat w-[110px] h-[56px] rounded-xl bg-[#0307121a] flex justify-center items-center">
+                                A4
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="flex mt-6 single-row">
+                    <div  class="seat-label w-[56px] h-[56px] rounded-xl  flex justify-center items-center">B</div>
+
+                    <div class="flex justify-between grow">
+                        <div class="flex gap-8">
+                            <div class="seat w-[110px] h-[56px] rounded-xl bg-[#0307121a] flex justify-center items-center">
+                                B1
+                            </div>
+                            <div class="seat w-[110px] h-[56px] rounded-xl bg-[#0307121a] flex justify-center items-center">
+                                B2
+                            </div>
+                        </div>
+                        <div class="flex gap-8">
+                            <div class="seat w-[110px] h-[56px] rounded-xl bg-[#0307121a] flex justify-center items-center">
+                                B3
+                            </div>
+                            <div class="seat w-[110px] h-[56px] rounded-xl bg-[#0307121a] flex justify-center items-center">
+                                B4
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex mt-6 single-row">
+                    <div  class="seat-label w-[56px] h-[56px] rounded-xl  flex justify-center items-center">C</div>
+
+                    <div class="flex justify-between grow">
+                        <div class="flex gap-8">
+                            <div class="seat w-[110px] h-[56px] rounded-xl bg-[#0307121a] flex justify-center items-center">
+                                C1
+                            </div>
+                            <div class="seat w-[110px] h-[56px] rounded-xl bg-[#0307121a] flex justify-center items-center">
+                                C2
+                            </div>
+                        </div>
+                        <div class="flex gap-8">
+                            <div class="seat w-[110px] h-[56px] rounded-xl bg-[#0307121a] flex justify-center items-center">
+                                C3
+                            </div>
+                            <div class="seat w-[110px] h-[56px] rounded-xl bg-[#0307121a] flex justify-center items-center">
+                                C4
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="w-6/12 ps-8">
+                <h3 class="font-semibold font-raleway text-2xl text-[#030712] pb-3 border-b-2 border-dashed">Select Your Seat</h3>
+                <div class="p-8 rounded-xl bg-[#F7F8F8] mt-3">
+                    <div class="flex pb-4 border-b-2 border-dashed">
+                        <div class="w-5/12"><span class="text-[#030712] font-medium">Seat <span class="text-white text-xs font-bold bg-[#1DD100] rounded-full px-1">2</span></span></div>
+                        <div class="w-4/12"><span class="text-[#030712] font-medium">Class <span>2</span></span></div>
+                        <div class="w-3/12 text-end"><span class="text-[#030712] font-medium">Price</span></div>
+                    </div>
+                    <div class="border-b-2 ">
+                        <div class="flex py-2">
+                            <div class="w-5/12"><span class="text-[#03071299] ">A1 </span></div>
+                            <div class="w-4/12"><span class="text-[#03071299] ">Economoy </span></div>
+                            <div class="w-3/12 text-end"><span class="text-[#03071299] ">550 </span></div>
+                        </div>
+                        <div class="flex py-2">
+                            <div class="w-5/12"><span class="text-[#03071299] ">A2 </span></div>
+                            <div class="w-4/12"><span class="text-[#03071299] ">Economoy </span></div>
+                            <div class="w-3/12 text-end"><span class="text-[#03071299] ">550 </span></div>
+                        </div>
+                    </div>
+                    <div class="py-3 flex justify-between">
+                        <span class="font-medium text-[#030712]">Total Price</span>
+                        <span class="font-medium text-[#030712]">1100</span>
+                    </div>
+                        
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer></footer>
+  </body>
+</html>
