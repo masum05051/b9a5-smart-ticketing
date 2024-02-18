@@ -24,6 +24,9 @@
       rel="stylesheet"
     />
     <style>
+        * {
+            scroll-behavior: smooth;
+        }
       .font-inter {
         font-family: "Inter", sans-serif;
       }
@@ -60,14 +63,15 @@
     <header>
       <div class="container mx-auto">
         <nav class="flex justify-between items-center py-8">
-          <a href="#"
-            ><span class="text-[#030712] font-extrabold text-4xl"
-              >P-Ticket</span
-            ></a
-          >
+          <a href="#"><span class="text-[#030712] font-extrabold text-4xl">P-Ticket</span></a>
+          <div class=" flex gap-10">
+            <a class="text-[#030712b3] font-raleway text-lg font-medium " href="#">Home</a>
+            <a class="text-[#030712b3] font-raleway text-lg font-medium " href="#">About</a>
+            <a class="text-[#030712b3] font-raleway text-lg font-medium " href="#">Destination</a>
+            <a class="text-[#030712b3] font-raleway text-lg font-medium " href="#">Search</a>
+          </div>
           <button
-            class="flex items-center gap-2 px-8 py-4 bg-[#1dd1001a] rounded-xl border border-[#1dd10066] color-[#1dd10066] font-bold text-xl font-raleway"
-          >
+            class="flex items-center gap-2 px-8 py-4 bg-[#1dd1001a] rounded-xl border border-[#1dd10066] color-[#1dd10066] font-bold text-xl font-raleway">
             Bus <img src="./images/bus-icon.png" alt="" />
           </button>
         </nav>
@@ -80,7 +84,7 @@
             background-size: 100% 100%;
           "
         >
-          <div class="py-[70px] px-8 text-center pb-[120px]">
+          <div class="py-[70px] px-8 text-center pb-[140px]">
             <h2
               class="text-white font-bold text-[64px] leading-[86px] text-center max-w-[742px] m-auto font-raleway"
             >
@@ -93,15 +97,37 @@
               Yes, you can run unit tests and view the results directly within
               the app. The integrated testing features allow for a streamlined .
             </p>
-            <button
+            <a href="#ticket"
               class="btn px-6 py-6 bg-[#1DD100] font-raleway font-bold text-xl rounded-xl"
             >
               Buy Tickets
-            </button>
+        </a>
           </div>
         </div>
         <div>
-          <div></div>
+          <div class="flex justify-center gap-6 mt-[-60px]">
+            <div class="p-8 flex  items-center rounded-3xl border-b-2 border-[#1DD100] bg-white min-w-[308px] gap-3 justify-center">
+                <img src="./images/people.png" alt="">
+                <div class="space-y-2">
+                    <h3 class="text-[#030712] font-bold text-4xl">500K+</h3>
+                    <p class="text-[#03071299] text-lg">Registered users</p>
+                </div>
+            </div>
+            <div class="p-8 flex items-center rounded-3xl border-b-2 border-[#1DD100] bg-white min-w-[308px] gap-3 justify-center">
+                <img src="./images/ticket-cupon.png" alt="">
+                <div class="space-y-2">
+                    <h3 class="text-[#030712] font-bold text-4xl">1.7 lacks</h3>
+                    <p class="text-[#03071299] text-lg">Tickets sold</p>
+                </div>
+            </div>
+            <div class="p-8 flex items-center rounded-3xl border-b-2 border-[#1DD100] bg-white min-w-[308px] gap-3 justify-center">
+                <img src="./images/stoppage.png" alt="">
+                <div class="space-y-2">
+                    <h3 class="text-[#030712] font-bold text-4xl">80K+</h3>
+                    <p class="text-[#03071299] text-lg">Rental partners</p>
+                </div>
+            </div>
+          </div>
         </div>
       </div>
     </header>
@@ -169,7 +195,7 @@
         </div>
       </div>
       <!-- ticket view -->
-      <div class="ticket bg-[#F7F8F8] pb-14">
+      <div id="ticket" class="ticket bg-[#F7F8F8] pb-14 pt-5 border-t rounded-[88px] border-[#1DD100]">
         <div class="container mx-auto">
           <h2
             class="font-raleway text-[40px] font-bold text-[#030712] text-center mb-2"
@@ -472,7 +498,29 @@
             <button class="btn min-w-[300px] mx-auto py-4 bg-[#27AE60] rounded-full mt-5" id="continue">Continue</button>
       </div>
     </main>
-    <footer></footer>
+    <footer class="bg-[#030712] py-12">
+        <div class="container mx-auto">
+            <div class="flex justify-between">
+                <div>
+                    <a href="#"><span class="text-[#fff] font-extrabold text-4xl">P-Ticket</span></a>
+                    <p class="text-[#ffffffcc] text-lg max-w-[374px] mt-4">P-Ticket is a digital platform to make your daily commuting better.</p>
+                </div>
+                <div>
+                    <h3 class="text-white text-xl font-raleway font-semibold mb-4">Download our app</h3>
+                    <img src="./images/Group 104.png" alt="">
+                </div>
+            </div>
+            <div class="my-10 border-t-2 border-dashed "></div>
+            <div class="flex justify-between items-center">
+                <p class="text-[#ffffffcc] text-base">@all rights reserved, P-Ticket services limited.2024</p>
+                <div class="flex text-white gap-5">
+                    <a href="#">Terms & condition</a>
+                    <a href="#">Return & refund policy</a>
+                    <a href="#">Privacy policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <script src="./script.js"></script>
   </body>
