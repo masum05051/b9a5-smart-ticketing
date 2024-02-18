@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>b9a5-smart-ticketing</title>
+    <!-- daisy ui cdn -->
+    
     <!-- tailwind css cdn link  -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- fontawesome cdn link -->
@@ -51,6 +53,7 @@
         width: 80px;
         left: 0;
       }
+      
     </style>
   </head>
   <body class="font-inter">
@@ -112,7 +115,7 @@
           </h2>
           <div class="flex gap-6">
             <div class="bg-[#FFBF0F] flex rounded-3xl grow">
-              <div class="space-y-5 p-[52px] coupon-text relative">
+              <div class="space-y-5 p-[52px] coupon-text relative grow">
                 <h3 class="text-[##030712cc] font-extrabold text-[40px]">
                   15% OFF
                 </h3>
@@ -125,7 +128,7 @@
                 >
               </div>
               <div class="flex justify-center gap-2 flex-col p-[52px]">
-                <span class="text-[##030712cc] text-3xl font-semibold"
+                <span class="text-[##030712cc] text-3xl font-semibold font-raleway"
                   >NEW15</span
                 >
                 <span class="text-[#03071280] font-medium text-xl"
@@ -134,7 +137,7 @@
               </div>
             </div>
             <div class="bg-[#F78C9C] flex rounded-3xl grow">
-              <div class="space-y-5 p-[52px] coupon-text relative">
+              <div class="space-y-5 p-[52px] coupon-text relative grow">
                 <h3 class="text-[##030712cc] font-extrabold text-[40px]">
                   20% OFF
                 </h3>
@@ -147,7 +150,7 @@
                 >
               </div>
               <div class="flex justify-center gap-2 flex-col p-[52px]">
-                <span class="text-[##030712cc] text-3xl font-semibold"
+                <span class="text-[##030712cc] text-3xl font-semibold font-raleway"
                   >Couple 20</span
                 >
                 <span class="text-[#03071280] font-medium text-xl"
@@ -166,7 +169,7 @@
         </div>
       </div>
       <!-- ticket view -->
-      <div class="ticket bg-[#F7F8F8]">
+      <div class="ticket bg-[#F7F8F8] pb-14">
         <div class="container mx-auto">
           <h2
             class="font-raleway text-[40px] font-bold text-[#030712] text-center mb-2"
@@ -194,13 +197,13 @@
                 <div class="flex bg-[#1dd10026] rounded-xl px-4 py-3 gap-2">
                   <img src="./images/seat-green.png" alt="" />
                   <span class="text-[#1DD100] text-lg font-medium"
-                    ><span>40</span> Seats left</span
+                    ><span id="seat-available">40</span> Seats left</span
                   >
                 </div>
               </div>
               <div class="p-8 rounded-3xl bg-[#F7F8F8] mt-6">
                 <div
-                  class="flex justify-between items-center pb-3 border-b border-dashed border-b-2"
+                  class="flex justify-between items-center pb-3 border-dashed border-b-2"
                 >
                   <span class="text-[#03071299]">Route</span>
                   <span class="text-[#030712] font-raleway font-semibold"
@@ -208,7 +211,7 @@
                   >
                 </div>
                 <div
-                  class="flex justify-between items-center py-3 border-b mb-3 border-dashed border-b-2"
+                  class="flex justify-between items-center py-3 mb-3 border-dashed border-b-2"
                 >
                   <span class="text-[#03071299]">Departure Time</span>
                   <span class="text-[#030712] font-raleway font-semibold"
@@ -260,20 +263,12 @@
 
                     <div class="flex justify-between grow">
                         <div class="flex gap-8">
-                            <div class="seat w-[110px] h-[56px] rounded-xl bg-[#0307121a] flex justify-center items-center">
-                                A1
-                            </div>
-                            <div class="seat w-[110px] h-[56px] rounded-xl bg-[#0307121a] flex justify-center items-center">
-                                A2
-                            </div>
+                            <div id="a1" class="seat w-[110px] h-[56px] rounded-xl bg-[#0307121a] flex justify-center items-center">A1</div>
+                            <div id="a2" class="seat w-[110px] h-[56px] rounded-xl bg-[#0307121a] flex justify-center items-center">A2</div>
                         </div>
                         <div class="flex gap-8">
-                            <div class="seat w-[110px] h-[56px] rounded-xl bg-[#0307121a] flex justify-center items-center">
-                                A3
-                            </div>
-                            <div class="seat w-[110px] h-[56px] rounded-xl bg-[#0307121a] flex justify-center items-center">
-                                A4
-                            </div>
+                            <div id="a3" class="seat w-[110px] h-[56px] rounded-xl bg-[#0307121a] flex justify-center items-center">A3</div>
+                            <div id="a4" class="seat w-[110px] h-[56px] rounded-xl bg-[#0307121a] flex justify-center items-center">A4</div>
                         </div>
                     </div>
                 </div>
@@ -284,20 +279,12 @@
 
                     <div class="flex justify-between grow">
                         <div class="flex gap-8">
-                            <div class="seat w-[110px] h-[56px] rounded-xl bg-[#0307121a] flex justify-center items-center">
-                                B1
-                            </div>
-                            <div class="seat w-[110px] h-[56px] rounded-xl bg-[#0307121a] flex justify-center items-center">
-                                B2
-                            </div>
+                            <div id="b1" class="seat w-[110px] h-[56px] rounded-xl bg-[#0307121a] flex justify-center items-center">B1</div>
+                            <div id="b2" class="seat w-[110px] h-[56px] rounded-xl bg-[#0307121a] flex justify-center items-center">B2</div>
                         </div>
                         <div class="flex gap-8">
-                            <div class="seat w-[110px] h-[56px] rounded-xl bg-[#0307121a] flex justify-center items-center">
-                                B3
-                            </div>
-                            <div class="seat w-[110px] h-[56px] rounded-xl bg-[#0307121a] flex justify-center items-center">
-                                B4
-                            </div>
+                            <div id="b3" class="seat w-[110px] h-[56px] rounded-xl bg-[#0307121a] flex justify-center items-center">B3</div>
+                            <div id="b4" class="seat w-[110px] h-[56px] rounded-xl bg-[#0307121a] flex justify-center items-center">B4</div>
                         </div>
                     </div>
                 </div>
@@ -307,20 +294,12 @@
 
                     <div class="flex justify-between grow">
                         <div class="flex gap-8">
-                            <div class="seat w-[110px] h-[56px] rounded-xl bg-[#0307121a] flex justify-center items-center">
-                                C1
-                            </div>
-                            <div class="seat w-[110px] h-[56px] rounded-xl bg-[#0307121a] flex justify-center items-center">
-                                C2
-                            </div>
+                            <div id="c1" class="seat w-[110px] h-[56px] rounded-xl bg-[#0307121a] flex justify-center items-center">C1</div>
+                            <div id="c2" class="seat w-[110px] h-[56px] rounded-xl bg-[#0307121a] flex justify-center items-center">C2</div>
                         </div>
                         <div class="flex gap-8">
-                            <div class="seat w-[110px] h-[56px] rounded-xl bg-[#0307121a] flex justify-center items-center">
-                                C3
-                            </div>
-                            <div class="seat w-[110px] h-[56px] rounded-xl bg-[#0307121a] flex justify-center items-center">
-                                C4
-                            </div>
+                            <div id="c3" class="seat w-[110px] h-[56px] rounded-xl bg-[#0307121a] flex justify-center items-center">C3</div>
+                            <div id="c4" class="seat w-[110px] h-[56px] rounded-xl bg-[#0307121a] flex justify-center items-center">C4</div>
                         </div>
                     </div>
                 </div>
@@ -330,33 +309,64 @@
                 <h3 class="font-semibold font-raleway text-2xl text-[#030712] pb-3 border-b-2 border-dashed">Select Your Seat</h3>
                 <div class="p-8 rounded-xl bg-[#F7F8F8] mt-3">
                     <div class="flex pb-4 border-b-2 border-dashed">
-                        <div class="w-5/12"><span class="text-[#030712] font-medium">Seat <span class="text-white text-xs font-bold bg-[#1DD100] rounded-full px-1">2</span></span></div>
-                        <div class="w-4/12"><span class="text-[#030712] font-medium">Class <span>2</span></span></div>
+                        <div class="w-5/12"><span class="text-[#030712] font-medium">Seat <span class="text-white text-xs font-bold bg-[#1DD100] rounded-full px-1" id="seat-count">0</span></span></div>
+                        <div class="w-4/12"><span class="text-[#030712] font-medium">Class</span></div>
                         <div class="w-3/12 text-end"><span class="text-[#030712] font-medium">Price</span></div>
                     </div>
-                    <div class="border-b-2 ">
-                        <div class="flex py-2">
-                            <div class="w-5/12"><span class="text-[#03071299] ">A1 </span></div>
-                            <div class="w-4/12"><span class="text-[#03071299] ">Economoy </span></div>
-                            <div class="w-3/12 text-end"><span class="text-[#03071299] ">550 </span></div>
-                        </div>
-                        <div class="flex py-2">
-                            <div class="w-5/12"><span class="text-[#03071299] ">A2 </span></div>
-                            <div class="w-4/12"><span class="text-[#03071299] ">Economoy </span></div>
-                            <div class="w-3/12 text-end"><span class="text-[#03071299] ">550 </span></div>
-                        </div>
+                    <div class="border-b-2" id="selected-seat-container">
+                        
                     </div>
                     <div class="py-3 flex justify-between">
                         <span class="font-medium text-[#030712]">Total Price</span>
-                        <span class="font-medium text-[#030712]">1100</span>
+                        <span class="font-medium text-[#030712]" id="total-price">00</span>
                     </div>
-                        
+                    <div class="py-3 flex justify-between hidden">
+                        <span class="font-medium text-[#030712]">Discount</span>
+                        <span class="font-medium text-[#030712]" id="discount-price">00</span>
+                    </div>
+                    <div class="relative">
+                        <input class="w-full p-5 rounded-xl" type="text" name="coupon-code" id="coupon-code" placeholder="Have any coupon?">
+                        <button class="btn font-semibold bg-[#0307121a] rounded-lg px-4 py-2 text-white absolute right-0 top-2/4 translate-y-[-50%] mr-3" id="coupon-apply" disabled>Apply</button>
+                    </div>
+                    <div class="py-3 flex justify-between">
+                        <span class="font-medium text-[#030712]">Grand Total</span>
+                        <span class="font-medium text-[#030712]" id="grand-total">00</span>
+                    </div>   
+                </div>
+                <div class="my-3">
+                    <label class="text-[#030712] font-semibold" for="name">Passenger Name*</label>
+                    <input class="w-full p-5 rounded-xl border mt-2" type="text" name="coupon" id="name" placeholder="Enter your name">
+                </div>
+                <div class="my-3">
+                    <label class="text-[#030712] font-semibold" for="number">Phone Number*</label>
+                    <input class="w-full p-5 rounded-xl border mt-2" type="number" name="number" id="number" placeholder="Enter your phone number">
+                </div>
+                <div class="my-3">
+                    <label class="text-[#030712] font-semibold" for="email">Email ID*</label>
+                    <input class="w-full p-5 rounded-xl border mt-2" type="email" name="email" id="email" placeholder="Enter your email id">
+                </div>
+                <div class="py-3">
+                    <button class="btn w-full text-white bg-[#0307121a] font-raleway text-xl font-extrabold px-8 py-5 rounded-2xl" id="next" disabled>Next</button>
+                </div>
+                <div class="flex justify-evenly py-3">
+                    <a class="text-[#03071299] underline" href="#">Terms and Conditions</a>
+                    <a class="text-[#03071299] underline" href="#">Cancellation Policy</a>
                 </div>
             </div>
           </div>
         </div>
       </div>
+      <div class="modal-popup px-16 py-12 text-center  rounded-2xl shadow-lg m-3 fixed top-2/4 left-2/4 z-50 bg-white translate-x-[-50%] translate-y-[-50%] hidden" id="modal-popup">
+        <img class="mx-auto" src="./images/success.png" alt="">
+        <span class="text-[#27AE60] font-roboto text-2xl font-bold my-10">Success</span>
+        <p class="text-[#4A4A4A] font-roboto text-xl font-medium max-w-[561px] mx-auto">Thank you for Booking Our Bus Seats. 
+            We are working hard to find the best service and deals for you</p>
+            <p class="text-[#4A4A4A] font-roboto text-xl font-light">Shortly you will find a confirmation in your email.</p>
+            <button class="btn min-w-[300px] mx-auto py-4 bg-[#27AE60] rounded-full mt-5" id="continue">Continue</button>
+      </div>
     </main>
     <footer></footer>
+
+    <script src="./script.js"></script>
   </body>
 </html>
