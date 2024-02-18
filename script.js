@@ -9,12 +9,13 @@ let continueBtn = document.getElementById('continue');
 let couponCode = document.getElementById('coupon-code');
 let couponApply = document.getElementById('coupon-apply');
 let selectedSeat = 0;
+let discountPriceContainer = document.getElementById('discount-price-container');
 let discountPrice = document.getElementById('discount-price');
 const validCoupon = ['NEW15', 'Couple 20'];
 let seatCount = document.getElementById('seat-count');
 let SelectedSeatContainer = document.getElementById('selected-seat-container');
 
-
+seatAvailable.innerHTML = seats.length;
 continueBtn.addEventListener('click' , function() {
     modalPopup.classList.remove('inline-block');
     modalPopup.classList.add('hidden');
@@ -93,7 +94,7 @@ couponApply.addEventListener('click', function() {
             discountPrice.innerHTML = percentage;
         }
         couponCode.parentNode.classList.add('hidden');
-        discountPrice.parentNode.classList.remove('hidden');
+        discountPriceContainer.classList.remove('hidden');
         
     }else {
         console.log(' not valid')
