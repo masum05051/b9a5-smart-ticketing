@@ -49,7 +49,7 @@ for (let index = 0; index < seats.length; index++) {
             <div class="w-3/12 text-end"><span class="text-[#03071299] ">550 </span></div>
             </div>
             `;
-            console.log(e)
+           
             seat.removeEventListener('click', seatCalculation);
             if(inputNumber.value.length > 0 && selectedSeat > 0) {
                 nextBtn.removeAttribute('disabled');
@@ -97,7 +97,7 @@ couponApply.addEventListener('click', function() {
         discountPriceContainer.classList.remove('hidden');
         
     }else {
-        console.log(' not valid')
+        alert('invalid coupon code.')
     }
 })
 
